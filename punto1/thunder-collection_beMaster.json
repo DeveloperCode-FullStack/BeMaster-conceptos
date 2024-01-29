@@ -1,0 +1,23 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "beMaster",
+    "dateExported": "2024-01-29T04:28:50.315Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "cdbe73e1-633f-4b70-aba7-ce9a11986667",
+            "colId": "b2ce6c38-0e3f-49cf-a39c-ad0e8ac7fcc8",
+            "containerId": "",
+            "name": "DataGitHub",
+            "url": "http://localhost:3000/repos/ariel5253",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-01-29T04:28:38.292Z",
+            "modified": "2024-01-29T04:28:38.292Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

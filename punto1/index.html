@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Lista de Repositorios GitHub</title>
+
+		<!-- Agrega los enlaces a Bootstrap CSS y DataTables CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+
+		<link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10" />
+	</head>
+	<body>
+		<div class="container mt-5">
+			<h1 class="mb-4">Lista de Repositorios GitHub</h1>
+			<form id="usernameForm" class="mb-4">
+				<div class="form-row">
+					<div class="form-inline mb-2">
+						<label for="username" class="mr-sm-2"><h6>UserName de GitHub</h6></label>
+						<input type="text" class="form-control form-control-sm" id="username" name="username" required />
+					</div>
+					<div class="col-2 mb-2">
+						<button type="button" class="btn btn-primary btn-block" onclick="fetchRepositories()">Buscar Repositorios</button>
+					</div>
+				</div>
+			</form>
+
+			<hr />
+			<table id="repositoriesTable" class="table table-light table-hover">
+				<thead>
+					<tr>
+						<th>Nombre</th>
+						<th>Descripción</th>
+						<th>Popularidad</th>
+						<th>URL</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- Los datos de la tabla se cargarán aquí -->
+				</tbody>
+			</table>
+			<br />
+		</div>
+
+		<!-- Agrega los enlaces a jQuery, DataTables y Bootstrap JS al final del body para mejorar el rendimiento -->
+		<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+		<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<script src="main.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10" />
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+	</body>
+	<script>
+		// Configuración de DataTables al cargar la página
+		$(document).ready(function () {
+			$('#repositoriesTable').DataTable({
+				order: [[2, 'desc']], // Ordenar por la columna de Popularidad (índice 2) de manera descendente al cargar la tabla
+			});
+		});
+	</script>
+</html>
