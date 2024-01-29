@@ -6,6 +6,9 @@ Jesús Ariel González Bonilla
 ## Fecha
 29-01-2024
 
+## Diagrama Modelo Relacional
+![Gestión de Videos](dato/MR.png)
+
 ## Script SQL
 
 ```sql
